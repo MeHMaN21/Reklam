@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+#Reklam{
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+#Reklam div{
+    position: absolute;
+}
+
+
+#yup{
+  width: 200px;
+  height: 200px;
+  background-image: url('../img/yup.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  top: -300px;
+  left: 50%;
+  transform: translate(-50%);
+  animation-name: yup;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  z-index: 2;
+}
+#yuptechnology{
+   width: 200px;
+   height: 50px;
+    background-image: url('../img/yuptech.jfif');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    bottom: -100px;
+    left: 42%;
+    transform: translate(-42%);
+    animation-name: yuptechnology;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    z-index: 2;
+    transform: skew(360deg);
+    transition: width 2s, height 2s;
+    cursor: pointer;
+}
+#yuptechnology:hover{
+    width: 250px;
+    height: 100px;
+}
+#tel{
+    font-size: 50px;
+    color: black;
+    width: 350px;
+    bottom: 30px;
+    left: -350px;
+    transform: translate(-50%);
+    animation-name: tel;
+    animation-duration: 6s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+    z-index: 2;
+  
+  }
+ 
+@keyframes yup{
+    from{
+        top:-300px;
+    }
+    to {
+        top:70px;
+    }
+}
+@keyframes yuptechnology{
+    from{
+        bottom:-100px;
+        transform: skew(360deg);
+    }
+    to{
+        bottom: 170px;
+        transform: skew(0);
+        
+    }
+}
+@keyframes tel{
+    from{
+        left: -350px;
+        
+    }
+    to{
+        left: 118%;
+        
+    }
+}
